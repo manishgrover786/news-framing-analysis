@@ -1,0 +1,23 @@
+Task:
+Classify the framing of the following news item using the definitions below.
+
+Definitions:
+- pro_us: Frames US actions or interests positively or as legitimate.
+- anti_us: Frames US actions or interests negatively or as harmful.
+- neutral: Primarily descriptive without evaluative framing.
+
+Rules:
+- Base your decision only on the language and framing in the text.
+- Do not infer intent beyond what is stated.
+- If evidence is weak or mixed, choose neutral.
+
+Input:
+Title: {{title}}
+Description: {{description}}
+
+Output (JSON only):
+{
+  "label": "pro_us | anti_us | neutral",
+  "confidence": 0.0-1.0,
+  "evidence": "One sentence citing specific wording or framing"
+}
